@@ -1,25 +1,29 @@
-// Faça um programa para ler N números e armazena-los em um vetor. O valor
-// de N é fornecido pelo usuário. Em seguida, o seu programa deverá exibir os
-// números lidos.
+// Preencher um vetor com a soma acumulada de 1 a N. Em seguida, exibir os elementos do vetor.
 
 #include <stdio.h>
 
-int main(){
+int main() {
 
-    int N, soma;
+    int n;
 
-    printf("Digite a quantidade de valores: ");
-    scanf("%d", &N);
+    printf("Informe a quantidade de elementos do vetor: ");
+    scanf("%d", &n);
 
-    int valores[N];
-    valores[0] = 1;
-    printf("\nValores[0] = %d", valores[0]);
+    int numero, vetor[n];
 
-    for(int i = 1; i < N; i++){
-        valores[i] = valores[i - 1] + (i + 1);
-        printf("\nValores[%d] = %d", i, valores[i]);
+    printf("Informe um numero: ");
+    scanf("%d", &vetor[0]);
+
+    for(int i = 1; i < n; i++){
+        printf("Informe um numero: ");
+        scanf("%d", &numero);
+        vetor[i] = vetor[i - 1] + numero;
     }
 
-printf("\n");
+    printf("\nVetor com soma acumulada: ");
+    for(int i = 0; i < n; i++){
+        printf("%d ", vetor[i]);
+    }
+
 return 0;
 }

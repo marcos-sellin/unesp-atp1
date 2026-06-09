@@ -20,28 +20,41 @@
 // Palavra concatenada: bomdia
 
 #include <stdio.h>
-/* exercicio incompleto */
 
 int main(){
 
-    int numeros[10];
+    int n, m;
 
-    for(int i = 0; i < 10; i++){
-        printf("Digite um numero (%d/10): ", i + 1);
-        scanf("%d", &numeros[i]);
+    printf("Informe a quantidade de letras da primeira palavra: ");
+    scanf("%d", &n);
+    printf("Informe a quantidade de letras da primeira palavra: ");
+    scanf("%d", &m);
 
-        for(int j = 0; j < i; j++){
-            if(numeros[i] == numeros [j]){
-                printf("O numero ja foi digitado\n\n");
-                i--;
-            }
-        }
+    getchar();
+
+    char palavra1[n + m], palavra2[m];
+
+    printf("Digite a primeira palavra: ");
+
+    for(int i = 0; i < n; i++){
+        scanf(" %c", &palavra1[i]);
+    }
+    
+    printf("Digite a segunda palavra: ");
+
+    for(int i = 0; i < m; i++){
+        scanf(" %c", &palavra2[i]);
     }
 
-    printf("\nValores no vetor: ");
 
-    for(int i = 0; i < 10; i++){
-        printf("%d, ", numeros[i]);
+    for(int i = n; i < n + m; i++){
+        palavra1[i] = palavra2[i - n];
+    }
+
+    printf("\nPalavras concatenadas: \n");
+
+    for(int i = 0; i < n + m; i++){
+        printf("%c", palavra1[i]);
     }
 
 return 0;

@@ -1,28 +1,30 @@
-// Faça um programa para ler 5 números e armazena-los em um vetor. Em
-// seguida, o seu programa deverá exibir os números lidos.
+// Ler e armazenar N elementos em um vetor. Em seguida, exibir os elementos do vetor e a soma
+// dos elementos. Fazer o processamento após a leitura, com os dados armazenados.
 
 #include <stdio.h>
 
-int main(){
+int main() {
 
-    int N, soma;
+    int n;
 
-    printf("Digite a quantidade de valores: ");
-    scanf("%d", &N);
+    printf("Informe quantos elementos tera o vetor: ");
+    scanf("%d", &n);
 
-    int valores[N];
+    int vetor[n], soma = 0;
 
-    for(int i = 0; i < N; i++){
-        printf("\nDigite um valor: ");
-        scanf("%d", &valores[i]);
-        soma += valores[i];
+    for(int i = 0; i < n; i++){
+        printf("Digite um valor: ");
+        scanf("%d", &vetor[i]);
+        soma += vetor[i];
     }
 
-    for(int j = 0; j < N; j++){
-        printf("\nValores[%d]: %d", j, valores[j]);
-    }
+    printf("Vetor: ");
 
-    printf("\n\nSoma dos elementos: %d\n", soma);
+    for(int i = 0; i < n; i++){
+        printf("%d ", vetor[i]);
+    }
+    
+    printf("\nSoma dos valores: %d", soma);
 
 return 0;
 }
