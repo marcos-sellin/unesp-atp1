@@ -1,20 +1,27 @@
-// Faça um programa para ler N números e armazena-los em um vetor. O valor
-// de N é fornecido pelo usuário. Em seguida, imprima o vetor na ordem inversa.
+// Preencher um vetor com N elementos da sequência de Fibonacci. Em seguida, exibir os
+// elementos do vetor. Considere N>2.
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 int main() {
 
-    int randomico;
-    srand(time(NULL));
+    int n;
 
-    printf("aleatorio \t\t 0--9\n");
+    printf("Informe quantos elementos tera o vetor: ");
+    scanf("%d", &n);
 
-    for(int i = 0; i < 20; i++){
-        randomico = rand();
-        printf("%d \t\t\t %d\n", randomico, randomico%10);
+    int fibonacci[n];
+
+    fibonacci[0] = 1;
+    fibonacci[1] = 1;
+
+    for(int i = 2; i < n; i++){
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
+
+    printf("\nVetor da sequencia de fibonacci: ");
+    for(int i = 0; i < n; i++){
+        printf("%d ", fibonacci[i]);
     }
 
 return 0;

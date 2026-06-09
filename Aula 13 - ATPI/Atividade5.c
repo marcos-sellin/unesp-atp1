@@ -1,42 +1,40 @@
-// Faça um programa para ler N números e armazena-los em um vetor. O valor
-// de N é fornecido pelo usuário. Em seguida, o usuário fornecerá um número. Seu
-// programa deve verificar se esse número está na lista de valores digitados pelo
-// usuário, ou seja, verificar se esse valor está no vetor. Por exemplo:
-// Lista digitada: 4 5 6 7 3 5 2 3 6
-// Número: 3
-// O número 3 está no vetor
-// Lista digitada: 4 5 6 7 3 5 2 3 6
-// Número: 9
-// O número 9 não está no vetor
+// Armazenar as notas de uma prova de vários alunos, calcula a média da turma, e mostra quais
+// alunos ficaram acima da média. Para tanto, o usuário indicará a quantidade de alunos. Quando
+// exibir o aluno acima da média, utilize a posição dele no vetor. Exemplo de exibição após a leitura
+// das notas:
+
+// Média da Turma: 5.90
+// Alunos acima da média
+// - Aluno 0: nota 7.55
+// - Aluno 3: nota 6.60
 
 #include <stdio.h>
 
-int main(){
+int main() {
 
-    int N;
+    int n;
 
-    printf("Digite a quantidade de alunos: ");
-    scanf("%d", &N);
-    printf("\n");
+    printf("Informe a quatidade de alunos: ");
+    scanf("%d", &n);
 
-    float media, notas[N];
+    float nota[n], media = 0;
 
-    for(int i = 0; i < N; i++){
-        printf("Informe a nota do aluno %d: ", i);
-        scanf("%f", &notas[i]);
-        media += notas[i];
+    for(int i = 0; i < n; i++){
+        printf("Informe a note de um aluno: ");
+        scanf("%f", &nota[i]);
+        media += nota[i];
     }
 
-    media /= N;
-    printf("\nMedia da sala: %.1f\n", media);
-    printf("\nAlunos acima da media: ");
+    media /= n;
 
-    for(int j = 0; j < N; j++){
-        if(notas[j] > media){
-            printf("\nAluno %d: %.1f", j, notas[j]);
+    printf("\nMedia da turma: %.1f", media);
+    printf("\nAlunos acima da media: \n");
+
+    for(int i = 0; i < n; i++){
+        if(nota[i] > media){
+            printf("Aluno %d: %.1f", i, nota[i]);
         }
     }
 
-printf("\n");
 return 0;
 }
