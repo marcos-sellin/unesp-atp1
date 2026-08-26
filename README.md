@@ -1,5 +1,10 @@
 # Repositório de Atividades — Algoritmos e Técnicas de Programação I
 
+## Observações
+
+- Cada pasta de aula contém os exercícios resolvidos em C referentes ao conteúdo daquela aula;
+- As aulas 1, 2 e 3 não foram adicionadas pois foram feitas para introduzir outros aspectos sobre algorítmos e programação, sem ainda usar a linguagem C.
+
 ## Informações Acadêmicas
 
 | Campo       | Informação |
@@ -28,8 +33,3 @@
 - [ ] Aula 16 - Funções
 - [ ] Aula 17 - Ponteiros
 - [ ] Aula 18 - Recursão
-
-## Observações
-
-- Cada pasta de aula contém os exercícios resolvidos em C referentes ao conteúdo daquela aula;
-- As aulas 1, 2 e 3 não foram adicionadas pois foram feitas para introduzir outros aspectos sobre algorítmos e programação, sem ainda usar a linguagem C.
