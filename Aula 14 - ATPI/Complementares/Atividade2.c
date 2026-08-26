@@ -8,17 +8,38 @@ int main(){
     int idade;
 
     printf("Digite o nome (completo): ");
-    gets(nome);
+    fgets(nome, 100, stdin);
+    
+    for(int i = 0; ; i++){
+        if(nome[i] == '\n'){
+            nome[i] = '\0';
+            break;
+        }
+    }
 
     printf("Digite a idade (em anos): ");
     scanf("%d", &idade);
     getchar();
 
     printf("Digite o endereco (rua - numero): ");
-    gets(endereco);
+    fgets(endereco, 50, stdin);
+
+    for(int i = 0; ; i++){
+        if(endereco[i] == '\n'){
+            endereco[i] = '\0';
+            break;
+        }
+    }
 
     printf("Digite o telefone ( (XX) XXXXX-XXXX ) : ");
-    gets(telefone);
+    fgets(telefone, 20, stdin);
+
+    for(int i = 0; ; i++){
+        if(telefone[i] == '\n'){
+            telefone[i] = '\0';
+            break;
+        }
+    }
 
     printf("\nInformacoes: %s, %d, %s, %s", nome, idade, endereco, telefone);
 

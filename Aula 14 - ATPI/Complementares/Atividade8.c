@@ -8,7 +8,14 @@ int main() {
     char string[100], invertida[100];
 
     printf("Digite uma palavra: ");
-    gets(string);
+    fgets(string, 100, stdin);
+
+    for(int i = 0; ; i++){
+        if(string[i] == '\n'){
+            string[i] = '\0';
+            break;
+        }
+    }
 
     for(int i = 0; string[i] != '\0'; i++){
         j++;
