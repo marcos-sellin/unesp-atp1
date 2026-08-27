@@ -31,5 +31,5 @@
 - [X] Aula 14 - String
 - [X] Aula 15 - Funções String
 - [X] Aula 16 - Funções
-- [ ] Aula 17 - Ponteiros
+- [X] Aula 17 - Ponteiros
 - [ ] Aula 18 - Recursão
