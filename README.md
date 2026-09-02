@@ -32,4 +32,4 @@
 - [X] Aula 15 - Funções String
 - [X] Aula 16 - Funções
 - [X] Aula 17 - Ponteiros
-- [ ] Aula 18 - Recursão
+- [X] Aula 18 - Recursão
